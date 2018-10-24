@@ -21,21 +21,23 @@ namespace BlackJack.controller
 
             int input = a_view.GetInput();
 
-            if (input == 'p')
+            if (a_view.WantsToPlay(input))
             {
                 a_game.NewGame();
             }
-            else if (input == 'h')
+            else if (a_view.WantsToHit(input))
             {
                 a_game.Hit();
             }
-            else if (input == 's')
+            else if (a_view.WantsToStand(input))
             {
                 a_game.Stand();
-                
+            }
+            else if (a_view.WantsToQuit(input)){
+                return false;
             }
 
-            return input != 'q';
+            return true;
         }
     }
 }

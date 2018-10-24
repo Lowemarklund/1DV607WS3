@@ -59,5 +59,33 @@ namespace BlackJack.view
             }
             
         }
+        public bool WantsToPlay(int input){
+            if(input == 'p'){
+                return true;
+            }
+            return false;
+         }
+
+         public bool WantsToHit(int input){
+            if(input == 'h'){
+                return true;
+            }
+            return false;
+         }
+
+
+         public bool WantsToStand(int input){
+            if(input == 's'){
+                return true;
+            }
+            return false;
+         }
+
+         public bool WantsToQuit(int input){
+            if(input == 'q'){
+                return true;
+            }
+            return false;
+         }  
     }
 }
