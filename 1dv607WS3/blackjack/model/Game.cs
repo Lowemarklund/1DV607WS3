@@ -9,7 +9,7 @@ namespace BlackJack.model
     {
         private model.Dealer m_dealer;
         private model.Player m_player;
-
+  
         public Game()
         {
             m_dealer = new Dealer(new rules.RulesFactory());
@@ -39,7 +39,7 @@ namespace BlackJack.model
         public bool Stand()
         {
             
-            return m_dealer.Stand(m_player);;
+            return m_dealer.Stand(m_player);
         }
 
         public IEnumerable<Card> GetDealerHand()
@@ -60,6 +60,10 @@ namespace BlackJack.model
         public int GetPlayerScore()
         {
             return m_player.CalcScore();
+        }
+
+        public void AddDealerSubscriber(INewCardRecievedObserver a_sub){
+            m_dealer.AddSubscriber(a_sub);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BlackJack.model
 {
@@ -49,6 +50,7 @@ namespace BlackJack.model
             {
                 foreach (Card c in GetHand())
                 {
+                    
                     if (c.GetValue() == Card.Value.Ace && score > 21)
                     {
                         score -= 10;

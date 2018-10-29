@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BlackJack.view
 {
     class SimpleView : IView
     {
-
         public void DisplayWelcomeMessage()
         {
             System.Console.Clear();
@@ -86,6 +86,6 @@ namespace BlackJack.view
                 return true;
             }
             return false;
-         }  
+         }
     }
 }
